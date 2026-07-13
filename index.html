@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vadim Sleptsov — Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Mobile top bar -->
+    <header class="mobile-header">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <span class="mobile-name">Vadim Sleptsov</span>
+    </header>
+
+    <!-- Mobile nav overlay -->
+    <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <ul class="case-list" id="mobileNavList"></ul>
+      <div class="nav-footer">
+        <a href="#about" data-view="about">About</a>
+        <a href="#contact" data-view="contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="layout">
+      <!-- Left sidebar (desktop) -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <h1 class="designer-name" data-view="work">Vadim Sleptsov</h1>
+          <nav>
+            <ul class="case-list" id="desktopCaseList"></ul>
+          </nav>
+        </div>
+        <div class="sidebar-bottom">
+          <a href="#about" data-view="about">Обо мне</a>
+          <a href="#contact" data-view="contact">Контакты</a>
+        </div>
+      </aside>
+
+      <!-- Right scrollable content -->
+      <main class="content" id="contentArea">
+        <!-- Work view -->
+        <section class="view view-work" id="viewWork">
+          <div class="case-nav">
+            <button class="nav-btn" id="prevBtn">&lt; Предыдущий кейс</button>
+            <div class="case-header">
+              <h2 class="case-title" id="caseTitle"></h2>
+              <div class="case-logo" id="caseLogo"></div>
+            </div>
+            <button class="nav-btn" id="nextBtn">Следующий кейс &gt;</button>
+          </div>
+          <p class="case-description" id="caseDescription"></p>
+          <div class="image-grid" id="imageGrid"></div>
+        </section>
+
+        <!-- About view -->
+        <section class="view view-about" id="viewAbout" hidden>
+          <h2 class="page-title">Обо мне</h2>
+          <div class="about-body">
+            <!-- <img
+              class="about-portrait"
+              src="images/1858175.jpg"
+              alt="Portrait of Vadim Sleptsov"
+            /> -->
+            <div class="about-text">
+              <p class="about-lead">
+                Graphic & Motion Designer из Якутска
+              </p>
+              <p>
+                Создаю визуальные решения, которые помогают бизнесу выделяться
+                в digital и офлайн-среде. Имею более 8 лет опыта работы в индустрии дизайна.
+              </p>
+              <p>
+                Работал как внутри студийных команд, так и на фрилансе с крупными ресторанными сетями, клубами и брендами Якутска.
+              </p>
+              <div class="about-meta">
+                <div><span>Услуги</span> Графический дизайн / Моушн-дизайн / Фирменный стиль / Печатная полиграфия</div>
+                <div><span>Локация</span> Якутск</div>
+                <div><span>Среди клиентов:</span> Traveler’s Coffee, Wok Cafe, Hills, Icon, Kitchen, Приоритет и др</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact view -->
+        <section class="view view-contact" id="viewContact" hidden>
+          <h2 class="page-title">Контакты</h2>
+          <div class="contact-body">
+            <p class="contact-lead">
+              Для новых проектов, сотрудничества или по любым вопросам — пишите мне.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span>Email</span>
+                <a href="mailto:vadslep@gmail.com">vadslep@gmail.com</a>
+              </li>
+              <li>
+                <span>Instagram</span>
+                <a href="instagram.com/heishellahigh" rel="noopener">heishellahigh</a>
+              </li>
+              <li>
+                <span>Номер</span>
+                8(999)060-04-15</li>
+            </ul>
+            <!-- <p class="contact-note">Открыт к долгосрочному сотрудничеству либо индивидуальным заказам</p> -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+
+    <!-- Lightbox overlay -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <img class="lightbox-img" alt="" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
